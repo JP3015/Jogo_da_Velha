@@ -38,9 +38,12 @@ public class Tabuleiro {
 	}
 	
 	public int checarTabuleiro(int linha, int coluna) {
-		if (tabuleiro[linha][coluna] != 0) {
-			System.out.println("\nEssa posição já foi jogada!");
+		if (linha > 3 || coluna > 3) {
+			System.out.println("\nLinha ou coluna não existe, coloque um número de 1 a 3 somente.");
 			return 0;
+		}else if (tabuleiro[linha][coluna] != 0) {
+				System.out.println("\nEssa posição já foi jogada!");
+				return 0;
 		}else {
 			return 1;
 		}
